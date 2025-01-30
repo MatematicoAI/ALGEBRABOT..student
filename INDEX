@@ -3,27 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactúa con el chatbot Álgebrabot y mejora tu experiencia en álgebra.">
     <title>Álgebrabot</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        figure {
+            margin: 20px auto;
+        }
+        figcaption {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a nuestro ALGEBRABOT</h1>
-    <p>Interactúa con el chatbot utilizando el widget a continuación:</p>
-  <img src="IMA.webp" alt="Algebrabot" style="max-width: 100%; height: auto;">
 
+    <header>Álgebrabot - Tu asistente de matemáticas</header>
+
+    <main>
+        <h1>Bienvenido a nuestro ALGEBRABOT</h1>
+        <p>Interactúa con el chatbot utilizando el widget a continuación:</p>
+
+        <figure>
+            <img src="IMA.webp" alt="Imagen representativa de Algebrabot">
+            <figcaption>Interactúa con nuestro chatbot para resolver tus dudas de álgebra.</figcaption>
+        </figure>
+    </main>
 
     <!-- Script del chatbot -->
     <script type="text/javascript">
-      (function(d, t) {
-          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          v.onload = function() {
-            window.voiceflow.chat.load({
-              verify: { projectID: '67951f5b92c4506f06167672' },
-              url: 'https://general-runtime.voiceflow.com',
-              versionID: 'production'
-            });
-          }
-          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-      })(document, 'script');
+        document.addEventListener("DOMContentLoaded", function() {
+            var v = document.createElement("script");
+            v.onload = function() {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '67951f5b92c4506f06167672' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production'
+                });
+            };
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+            v.type = "text/javascript";
+            document.body.appendChild(v);
+        });
     </script>
+
 </body>
 </html>
